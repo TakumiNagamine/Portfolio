@@ -55,6 +55,7 @@ hr{
     text-align: center;
 }
 
+/*動画用*/
 .video{
     padding-bottom: 5px;
     text-align: center;
@@ -63,6 +64,12 @@ hr{
 .video video{
     width: 800px;
     height: 400px;
+}
+
+/*Git用*/
+.Git{
+    padding: 5px;
+    text-align: center;
 }
 
 /*詳細・環境*/
@@ -126,16 +133,34 @@ hr{
     display: inline-block;
     margin-top: 40px;
     padding: 10px 20px;
-    border: 2px solid #0cab0c;
+    border: 2px solid #333;
     border-radius: 6px;
     text-decoration: none;
-    color: #0cab0c;
+    color: #333;
     font-weight: bold;
     transition: 0.3s;
 }
 
 .back-button:hover{
-    background-color: #0cab0c;
+    background-color: #333;
+    color: #fff;
+}
+
+/*Github用ボタン*/
+.github-button{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    border: 2px solid #333;
+    border-radius: 6px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.github-button:hover{
+    background-color: #333;
     color: #fff;
 }
 
