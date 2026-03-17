@@ -1,0 +1,105 @@
+/* =========================
+   共通
+========================= */
+
+body{
+    margin: 0;
+    font-family: 'Segoe UI', 'メイリオ', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+/* =========================
+   ヘッダー
+========================= */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #ffffff;
+}
+
+.logo a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #0cab0c;
+    font-size: 20px;
+}
+
+.nav{
+    display: flex;
+    gap: 30px;
+}
+
+.nav a{
+    text-decoration: none;
+    color: #0cab0c;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav a:hover{
+    opacity: 0.6;
+}
+
+
+/* =========================
+   メイン
+========================= */
+
+.profile-container{
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.page-title{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+
+
+/* =========================
+   プロフィールボックス
+========================= */
+
+.profile-box{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+
+/* 右（文章） */
+
+.profile-right h2{
+    margin: 0;
+    font-size: 28px;
+}
+
+.role{
+    color: #0cab0c;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.profile-right p{
+    line-height: 1.8;
+}
+
+.profile-right h3{
+    margin-top: 30px;
+}
+
+.skill-list{
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li{
+    margin-bottom: 8px;
+}
