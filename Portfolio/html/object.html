@@ -2,62 +2,24 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>ゲームジャム制作物</title>
-    <link rel="stylesheet" href="../css/image.css">
+    <title>オブジェクトモデル読み込みライブラリ活用</title>
+    <link rel="stylesheet" href="../css/object.css">
 </head>
 
 <body>
     <div class="top">
-        <h1>メモリーチャイム ～鐘を打て～</h1>
+        <h1>オブジェクトモデル読み込みライブラリ活用</h1>
     </div> 
 
     <div class="overview">
         <h2>概要</h2>
-        <p>本作品は、コントローラーを使用して、赤くなった鐘の部分を記憶し、順番通りうつ記憶ゲームです。
-        <br>また、ランキング機能やリザルト機能も実装されています。</p>
-        <img src="../images/bell/main.png" alt="タイトル画面とゲームメイン画面">
-    </div>
-    
-    <div class="video">
-         <h2>実行結果</h2>
-         <p>以下の動画は実行結果の動画になります。</p>
-         <video src="../video/memory.mp4" controls></video>
-    </div>
-    <hr>
-
-    <div class="detail">
-        <h2>開発環境・使用言語</h2>
-        <p>Visual Studio2022／C・C++</p>
-    </div>
-    <hr>
-
-    <div class="try">
-        <h2>学習の目的</h2>
-        <p>先輩とのゲームジャムの制作だったため、自分のしたことのない処理を教えてもらうべく<br>
-        したことのない、処理を全般に挑戦するようにしました。</p>
-    </div>
-    <hr>
-
-    <div class="ingenuity">
-        <h2>工夫したこと・苦労したこと</h2>
-        <h3>データ共有１</h3>
-        <p>タイトルのカーソル部分の処理です。</p>
-        <div class="img-margin">
-            <img src="../images/bell/title_code.png" alt="ソースコードとソースコードの処理部分のゲーム画面">
-        </div>
-        <h3>データ共有２</h3>
-        <p>リザルト結果を基にランキングに反映させる処理です。</p>
-        <div class="img-margin">
-            <img src="../images/bell/ranking_01.png" alt="ソースコードとソースコードの処理部分のゲーム画面">
-            <img src="../images/bell/ranking_02.png" alt="ソースコードとソースコードの処理部分のゲーム画面">
-        </div>
-    </div>
-    <hr>
-
-    <div class="learn">
-        <h2>反省・振り返り</h2>
-        <p>チームでの協力において、協力や計画は必要だなと考えました。<br>
-        自身が先輩となって後輩に教える際は、後輩をサポートできるようにしたいと考えることができました。</p>
+        <p>3Dモデル（オブジェクト）を表示するための描画のため自作ライブラリを使用し、<br>
+        リソースの読み込みから表示までを一貫して制御するプロジェクトです。既存の3Dモデルデータ（.objファイル）<br>
+        を利用し、自作関数内での「引数チェック」を通じて、指定したモデルを呼び出し、メイン関数に渡す仕組みを実装しました。</p>
+        <br>
+        <h2>実行結果</h2>
+         <p>以下の画像は、実行結果になります。</p>
+        <img src="../images/object/main.png" alt="タイトル画面とゲームメイン画面">
     </div>
     <hr>
 
@@ -68,6 +30,56 @@
     </div>
     <hr>
 
+    <div class="detail">
+        <h2>開発環境・使用言語・使用技術・その他</h2>
+        <p>開発環境：Visual Studio  
+        <br>使用言語：C++  
+        <br>使用技術：OpenGL / GLUT  
+        <br>その他：自作ライブラリ（ObjLoadLib）、AIツール（ChatGPT）</p>
+    </div>
+    <hr>
+
+    <div class="try">
+        <h2>学習の目的</h2>
+        <p>自作ライブラリを作成し、自作ライブラリを使用する方法と、それに合わせて、<br>
+        オブジェクトモデルの呼び出し方法を理解することが目的です。</p>
+    </div>
+    <hr>
+
+    <div class="ingenuity">
+        <h2>工夫・苦労・学習したこと</h2>
+        <br>
+        <p>全頂点のXYZ座標から最小値・最大値（AABB）を算出し、モデルの空間範囲を取得できる自作ライブラリの基盤機能です。<p>
+        <br>
+        <div class="img-margin">
+            <img src="../images/object/main01.png" alt="ソースコードとソースコードの処理部分のゲーム画面">
+        </div>
+        <br>
+        <p>コマンドライン引数の引数チェックをメイン関数で呼び出し、実装しました。<br>
+        また、ライブラリのインスタンスをグローバル変数として定義し、汎用性重視で、呼び出しやすいようにしました。</p>
+        <br>
+        <div class="img-margin">
+            <img src="../images/object/main01.png" alt="ソースコードとソースコードの処理部分のゲーム画面">
+        </div>
+        <br>
+        <p>プロジェクトのプロパティから、自作ライブラリや既存のライブラリの追加の方法を学び、<br>
+            コマンド引数から特定の.objファイルを追加して使うことを学びました。</p>
+        <br>
+        <div>
+            <img src="../images/object/main02.png" alt="ソースコードとソースコードの処理部分のゲーム画面" width="1013" height="376">
+        </div>
+    </div>
+    <hr>
+
+    <div class="learn">
+        <h2>反省・振り返り</h2>
+        <p>技術習得の過程において、特定の情報源に頼るのではなく、公式ドキュメントから定評のある<br>
+        技術解説サイトまで、調べぬく姿勢の重要性を再認識しました。また、AIツールを活用する際も、<br>
+        出力されたコードを単に利用するのではなく、自らの理解を深めるための教材として向き合うことを強く意識しました。</p>
+    </div>
+    <hr>
+
     <a href="../html/works.html" class="back-button">← Back to Works</a>
+    
 </body>
 </html>
