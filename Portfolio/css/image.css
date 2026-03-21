@@ -128,9 +128,9 @@ hr{
     height: 400px;
 }
 
-.back-button{
-    display: inline-block;
-    margin-top: 40px;
+.back-area {
+    text-align: center;   /* 中央寄せ */
+    margin: 50px 0;       /* 上下に余白 */
 }
 
 /*戻りボタン*/
